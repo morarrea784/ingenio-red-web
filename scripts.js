@@ -1281,16 +1281,46 @@ document.addEventListener('DOMContentLoaded', () => {
      * Esto significa que un solo listener gestiona los clics de muchos elementos.
      */
     function setupEventListeners() {
-        // Listener para el menú de hamburguesa
+        // Listener para el menú de hamburguesa MEJORADO
         const hamburger = document.querySelector('.hamburger-menu');
         const header = document.querySelector('.site-header');
+        const mainNav = document.querySelector('.main-nav');
+        
         if(hamburger && header) {
-            hamburger.addEventListener('click', () => {
+            hamburger.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                
                 const isOpening = !header.classList.contains('nav-open');
                 header.classList.toggle('nav-open');
                 document.body.style.overflow = isOpening ? 'hidden' : '';
                 hamburger.setAttribute('aria-expanded', isOpening);
+                
+                console.log('Menú hamburguesa:', isOpening ? 'abierto' : 'cerrado');
             });
+            
+            // Cerrar menú al hacer clic fuera
+            document.addEventListener('click', (e) => {
+                if (header.classList.contains('nav-open') && 
+                    !mainNav.contains(e.target) && 
+                    !hamburger.contains(e.target)) {
+                    header.classList.remove('nav-open');
+                    document.body.style.overflow = '';
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            // Cerrar menú al hacer clic en un enlace
+            if (mainNav) {
+                const navLinks = mainNav.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        header.classList.remove('nav-open');
+                        document.body.style.overflow = '';
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
         }
     
         // Listener para el dropdown del catálogo en desktop
