@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Búsqueda - Ingenio Red</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div style="padding: 20px; max-width: 800px; margin: 0 auto;">
+        <h1>🔍 Test de Búsqueda - Ingenio Red</h1>
+        
+        <div style="margin: 20px 0;">
+            <h3>Estado del Buscador:</h3>
+            <div id="search-status">Inicializando...</div>
+            <button onclick="window.forceSetupSearch()" style="margin-top: 10px; padding: 8px 16px; background: #00b0fa; color: white; border: none; border-radius: 4px; cursor: pointer;">🔧 Configurar Buscador Manualmente</button>
+            <button onclick="window.location.reload()" style="margin-top: 10px; margin-left: 10px; padding: 8px 16px; background: #ffe600; color: #000; border: none; border-radius: 4px; cursor: pointer;">🔄 Recargar Página</button>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h3>Buscador:</h3>
+            <div class="search-container" style="width: 100%; max-width: 500px;">
+                <input type="text" class="search-bar" placeholder="Buscar producto..." style="width: 100%;">
+                <div id="search-suggestions"></div>
+            </div>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h3>Productos de ejemplo para probar:</h3>
+            <ul>
+                <li>"Xbox" - Debería encontrar controles y accesorios</li>
+                <li>"Protector" - Debería encontrar protectores</li>
+                <li>"Control" - Debería encontrar controles</li>
+                <li>"Silicona" - Debería encontrar protectores de silicona</li>
+            </ul>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h3>Log de Debugging:</h3>
+            <div id="debug-log" style="background: #f0f0f0; padding: 10px; height: 200px; overflow-y: auto; font-family: monospace; font-size: 12px;"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    
+    <script>
+        // Capturar logs de consola
+        const originalLog = console.log;
+        const originalError = console.error;
+        const debugLog = document.getElementById('debug-log');
+        
+        function addToDebugLog(message, type = 'log') {
+            const time = new Date().toLocaleTimeString();
+            const logEntry = document.createElement('div');
+            logEntry.style.color = type === 'error' ? 'red' : 'black';
+            logEntry.textContent = `[${time}] ${message}`;
+            debugLog.appendChild(logEntry);
+            debugLog.scrollTop = debugLog.scrollHeight;
+        }
+        
+        console.log = function(...args) {
+            originalLog(...args);
+            addToDebugLog(args.join(' '), 'log');
+        };
+        
+        console.error = function(...args) {
+            originalError(...args);
+            addToDebugLog(args.join(' '), 'error');
+        };
+        
+        // Monitorear estado del buscador
+        setInterval(() => {
+            const statusDiv = document.getElementById('search-status');
+            const searchBar = document.querySelector('.search-bar');
+            const suggestions = document.getElementById('search-suggestions');
+            
+            let status = '';
+            status += `🔍 Search Bar: ${searchBar ? '✅' : '❌'}<br>`;
+            status += `📋 Suggestions: ${suggestions ? '✅' : '❌'}<br>`;
+            status += `📦 Productos: ${window.allProducts ? window.allProducts.length : 0}<br>`;
+            status += `🔧 Event Listeners: ${searchBar && (searchBar.oninput || searchBar.hasAttribute('data-listeners-set')) ? '✅' : '❌'}<br>`;
+            status += `⚙️ Función Manual: ${typeof window.forceSetupSearch === 'function' ? '✅' : '❌'}`;
+            
+            statusDiv.innerHTML = status;
+        }, 1000);
+    </script>
+</body>
+</html>

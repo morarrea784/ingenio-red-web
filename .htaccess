@@ -1,0 +1,32 @@
+# Configuración para formularios de contacto
+<Files "contact-handler.php">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Configuración de errores personalizados
+ErrorDocument 404 /index.html
+ErrorDocument 500 /index.html
+
+# Configuración PHP
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 30
+php_value max_input_time 30
+
+# Configuración de MIME types
+AddType application/x-httpd-php .php
+
+# Headers de seguridad
+Header always set X-Content-Type-Options nosniff
+Header always set X-Frame-Options DENY
+Header always set X-XSS-Protection "1; mode=block"
+
+# Configuración de cache
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>

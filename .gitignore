@@ -1,0 +1,20 @@
+# Archivos que no queremos subir a GitHub
+*.bak
+*.backup
+node_modules/
+.env
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*~
+*.tmp
+*.temp
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/

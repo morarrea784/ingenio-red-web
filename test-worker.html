@@ -1,0 +1,54 @@
+// 🧪 PRUEBA RÁPIDA - Guardarlo como test-worker.html y abrirlo en navegador
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prueba Worker Email</title>
+</head>
+<body>
+    <h2>🧪 Prueba del Worker de Email</h2>
+    <button onclick="probarWorker()">Enviar email de prueba</button>
+    <div id="resultado"></div>
+
+    <script>
+        async function probarWorker() {
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = '⏳ Enviando...';
+            
+            const datosCarrito = {
+                customer: {
+                    name: 'Juan Prueba',
+                    phone: '123456789',
+                    email: 'test@ejemplo.com'
+                },
+                items: [
+                    { name: 'Producto de prueba', quantity: 1, price: 100 }
+                ],
+                total: 100
+            };
+
+            try {
+                const response = await fetch('https://ingenio-carrito-handler.ingeniored2025.workers.dev/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(datosCarrito)
+                });
+
+                const result = await response.json();
+                
+                if (result.status === 'success') {
+                    resultado.innerHTML = `
+                        <h3>✅ ¡FUNCIONA!</h3>
+                        <p>📧 Email enviado a: ${result.emailSentTo}</p>
+                        <p>🆔 ID: ${result.emailId}</p>
+                    `;
+                } else {
+                    resultado.innerHTML = `<h3>❌ Error:</h3><p>${result.error}</p>`;
+                }
+            } catch (error) {
+                resultado.innerHTML = `<h3>❌ Error de conexión:</h3><p>${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

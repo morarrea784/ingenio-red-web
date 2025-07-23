@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora nuestro catálogo de productos tecnológicos, energía solar, domótica y más. Envíos a toda Colombia.">
+    <title>Catálogo - Ingenio Red</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="shortcut icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <!-- SEO y Open Graph -->
+    <meta property="og:title" content="Catálogo - Ingenio Red">
+    <meta property="og:description" content="Explora nuestro catálogo de productos tecnológicos, energía solar, domótica y más. Envíos a toda Colombia.">
+    <meta property="og:image" content="https://res.cloudinary.com/dhqpxn3y4/image/upload/f_auto,q_auto/v1716584297/banner-placeholder_qzk1qj.jpg">
+    <meta property="og:url" content="https://ingenio-red.com/catalogo.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Catálogo - Ingenio Red">
+    <meta name="twitter:description" content="Explora nuestro catálogo de productos tecnológicos, energía solar, domótica y más. Envíos a toda Colombia.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dhqpxn3y4/image/upload/f_auto,q_auto/v1716584297/banner-placeholder_qzk1qj.jpg">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <h1 class="visually-hidden">Catálogo de productos - Ingenio Red</h1>
+        <div class="logo-container">
+            <a href="index.html" aria-label="Ir al inicio">
+                <img src="assets/icons/logo.svg" alt="Logo Ingenio Red - Catálogo de productos" style="max-height:50px;display:block;" />
+            </a>
+        </div>
+    </header>
+    <main class="main-container">
+        <h2 id="category-title">Cargando categoría...</h2>
+        <div id="product-catalog-grid" class="product-grid"></div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <img src="assets/icons/logo.svg" alt="Logo Ingenio Red - Catálogo de productos" style="max-width: 140px; display: block; margin-bottom: 10px;">
+          <p style="font-size:1.1rem;color:#f3c605;font-weight:600;margin:0 0 10px 0;">Tecnología, energía y domótica para Colombia</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/ingenioredcolombia" target="_blank" rel="noopener noreferrer"><img src="assets/icons/facebook.svg" alt="Facebook Ingenio Red"></a>
+            <a href="https://www.instagram.com/ingenio_red_colombia" target="_blank" rel="noopener noreferrer"><img src="assets/icons/instagram.svg" alt="Instagram Ingenio Red"></a>
+            <a href="https://www.linkedin.com/company/ingenio-red" target="_blank" rel="noopener noreferrer"><img src="assets/icons/linkedin.svg" alt="LinkedIn Ingenio Red"></a>
+            <a href="https://www.youtube.com/@ingeniored" target="_blank" rel="noopener noreferrer"><img src="assets/icons/youtube.svg" alt="YouTube Ingenio Red"></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="garantia.html">Garantía</a></li>
+            <li><a href="privacidad.html">Privacidad</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contacto</h3>
+          <p>¿Tienes alguna pregunta? <br> No dudes en contactarnos.</p>
+          <div class="contact-info">
+            <img src="assets/icons/whatsapp.svg" alt="WhatsApp Ingenio Red">
+            <div><strong>WhatsApp</strong> <a href="https://wa.me/573185801243" target="_blank" rel="noopener noreferrer">+57 318 580 1243</a></div>
+          </div>
+          <div class="contact-info">
+            <img src="assets/icons/mail.svg" alt="Email Ingenio Red">
+            <div><strong>Email</strong> <a href="mailto:contacto@ingenio-red.com">contacto@ingenio-red.com</a></div>
+          </div>
+          <div class="contact-info">
+            <img src="assets/icons/clock.svg" alt="Horario Ingenio Red">
+            <div><strong>Horario</strong> <span>Lunes a Sábado: 9:00 AM - 6:00 PM</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Ingenio Red. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <div id="product-modal" class="modal"><div class="modal-content"><span class="close-button">&times;</span><div class="modal-body"></div></div></div>
+    <div id="cart-modal" class="modal" role="dialog" aria-modal="true" aria-label="Carrito de compras">
+        <div class="modal-content">
+            <span class="close-button cart-close" role="button" aria-label="Cerrar ventana">&times;</span>
+            <div class="cart-modal-header">
+                <div class="cart-header-content">
+                    <div class="cart-title-section-centered">
+                        <h2>🛒 Mi Carrito de Compras</h2>
+                        <p class="cart-subtitle">Revisa tus productos y completa tu pedido</p>
+                    </div>
+                </div>
+            </div>
+            <div id="cart-items-container"></div>
+            <div class="customer-data-form">
+                <div class="form-header">
+                    <div class="form-title-section">
+                        <h3>📋 Información de Contacto y Entrega</h3>
+                        <p>Completa tus datos para recibir atención personalizada por WhatsApp</p>
+                    </div>
+                    <div class="form-trust-indicators">
+                        <div class="trust-item">
+                            <img src="assets/icons/whatsapp-business-svgrepo-com.svg" alt="WhatsApp Business" class="trust-icon">
+                            <span>Atención Business</span>
+                        </div>
+                        <div class="trust-item">
+                            <img src="assets/icons/phone.svg" alt="Soporte" class="trust-icon">
+                            <span>Soporte Dedicado</span>
+                        </div>
+                        <div class="trust-item">
+                            <img src="assets/icons/garantia.svg" alt="Compra Segura" class="trust-icon">
+                            <span>Compra Segura</span>
+                        </div>
+                        <div class="trust-item trust-item-economico">
+                            <img src="assets/icons/cash-dollar.svg" alt="Económico" class="trust-icon">
+                            <span>Económico</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-progress-indicator">
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="form-progress"></div>
+                        </div>
+                        <span class="progress-text" id="progress-text">0 de 4 campos completados</span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customer-name">Nombre Completo *</label>
+                        <input type="text" id="customer-name" placeholder="Tu nombre completo" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-location">Dirección de entrega completa *</label>
+                        <input type="text" id="customer-location" placeholder="Calle 123 #45-67, Barrio, Ciudad" required />
+                        <small class="form-hint">Incluye calle, número, barrio y ciudad para envío preciso</small>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customer-email">Correo Electrónico *</label>
+                        <input type="email" id="customer-email" placeholder="tu@email.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-phone">Teléfono de contacto *</label>
+                        <input type="tel" id="customer-phone" placeholder="+57 300 123 4567" required />
+                        <small class="form-hint">Para coordinar la entrega contigo</small>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="customer-comments">Comentarios adicionales (Opcional)</label>
+                    <textarea id="customer-comments" placeholder="¿Necesitas algo especial? Ejemplo: entrega urgente, instalación, etc." rows="3"></textarea>
+                </div>
+            </div>
+            <button id="send-whatsapp-btn" class="whatsapp-checkout-btn">
+                <div class="btn-content">
+                    <img src="assets/icons/whatsapp-business-svgrepo-com.svg" alt="WhatsApp Business" class="whatsapp-icon">
+                    <div class="btn-text">
+                        <span class="btn-main-text">Enviar Pedido</span>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div id="toast-container" aria-live="polite"></div>
+    <!-- Si agregas imágenes de productos o banners en el futuro, usa siempre Cloudinary con f_auto,q_auto para máxima optimización. Ejemplo: -->
+    <!-- <img src="https://res.cloudinary.com/dhqpxn3y4/image/upload/f_auto,q_auto/v1716584297/ejemplo.jpg" alt="Producto ejemplo"> -->
+    <script src="scripts.js"></script>
+    <script src="image-optimizer.js"></script>
+    <script>
+    // Validación del formulario de catálogo
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.querySelector('form[name="catalog-contact"]');
+      if (!form) return;
+      form.addEventListener('submit', function(e) {
+        let valid = true;
+        // Validación nombre
+        const name = document.getElementById('cat-name');
+        const nameError = document.getElementById('cat-name-error');
+        if (!name.value.trim()) {
+            nameError.textContent = 'Por favor ingresa tu nombre.';
+            valid = false;
+        } else {
+            nameError.textContent = '';
+        }
+        // Validación email
+        const email = document.getElementById('cat-email');
+        const emailError = document.getElementById('cat-email-error');
+        if (!/^\S+@\S+\.\S+$/.test(email.value)) {
+            emailError.textContent = 'Por favor ingresa un correo válido.';
+            valid = false;
+        } else {
+            emailError.textContent = '';
+        }
+        // Validación mensaje
+        const message = document.getElementById('cat-message');
+        const messageError = document.getElementById('cat-message-error');
+        if (!message.value.trim()) {
+            messageError.textContent = 'Por favor escribe tu mensaje.';
+            valid = false;
+        } else {
+            messageError.textContent = '';
+        }
+        if (!valid) {
+            e.preventDefault();
+        }
+      });
+    });
+    </script>
+</body>
+</html>

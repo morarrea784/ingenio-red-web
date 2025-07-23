@@ -1,0 +1,110 @@
+[
+  {
+    "categoria": "Vídeo juegos y consolas",
+    "url_imagen_cloudinary": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752349004/banner-video-juegos-consolas_orceuh.webp",
+    "banners_principales": "banners_principal-1",
+    "url_banners_principales": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752383637/ingenio-banner-solar_cucuxu.webp",
+    "banner_carrusel_superior": "banner-bienvenida-juegos",
+    "url_banner_carrusel_superior": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752467678/banner-drone-video-juegos-sonido_xvpkvb.webp",
+    "banner_carrusel_inferior": "banner-parlantes",
+    "url_banner_carrusel_inferior": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752467678/banner-red-parlantes_evpfjb.webp",
+    "banner-inferior-principal": "banner-inferior-1",
+    "url_banner-inferior-principal": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752467678/banner-inferior-logo-ingenio-red_ztcmxx.webp"
+  },
+  {
+    "categoria": "Cámaras De Seguridad 4k y HD",
+    "url_imagen_cloudinary": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752349008/banner-camaras-de-seguridad_f5kyhl.webp",
+    "banners_principales": "banners_principal-2",
+    "url_banners_principales": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752383637/banner-principal-ingenio-red-1_viczdi.webp",
+    "banner_carrusel_superior": "banner-panel-solar-dron",
+    "url_banner_carrusel_superior": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752467678/banner-panel-solar-venilador-drone_u9vtm0.webp",
+    "banner_carrusel_inferior": "banner-computadores-camaras",
+    "url_banner_carrusel_inferior": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752467679/banner-computadores-camaras_p1jr35.webp",
+    "banner-inferior-principal": "",
+    "url_banner-inferior-principal": ""
+  },
+  {
+    "categoria": "Drones",
+    "url_imagen_cloudinary": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752349005/banner-drones_is5irf.webp",
+    "banners_principales": "banners_principal-3",
+    "url_banners_principales": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752383637/banner-video-juegos-publici_vaxvlw.webp",
+    "banner_carrusel_superior": "banner-panel-solar",
+    "url_banner_carrusel_superior": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752467678/banner-panel-solar_zxiorr.webp",
+    "banner_carrusel_inferior": "banner-video-juegos",
+    "url_banner_carrusel_inferior": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752467678/banner-sonido-panel-solar-drone_jq9cui.webp",
+    "banner-inferior-principal": "",
+    "url_banner-inferior-principal": ""
+  },
+  {
+    "categoria": "Domotica y Automatización",
+    "url_imagen_cloudinary": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752349007/banner-domotica-automatizacion_t4qgui.webp",
+    "banners_principales": "banners_principal-4",
+    "url_banners_principales": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752383637/banner-principal-web_jirxnz.webp",
+    "banner_carrusel_superior": "banner-computador-cam",
+    "url_banner_carrusel_superior": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752467679/banner-computador-dron_ma18xm.webp",
+    "banner_carrusel_inferior": "banner-drone",
+    "url_banner_carrusel_inferior": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752467679/banner-drone_bnro8i.webp",
+    "banner-inferior-principal": "",
+    "url_banner-inferior-principal": ""
+  },
+  {
+    "categoria": "Tecnología Led Luces",
+    "url_imagen_cloudinary": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752349004/banner-tecnologia-led-luces_zgydsl.webp",
+    "banners_principales": "banners_principal-5",
+    "url_banners_principales": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752383637/ofertas-tecnologicas_xgj3wn.webp",
+    "banner_carrusel_superior": "banner-dron-camara",
+    "url_banner_carrusel_superior": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752467679/banner-drones-camaras_ipgf4c.webp",
+    "banner_carrusel_inferior": "",
+    "url_banner_carrusel_inferior": "",
+    "banner-inferior-principal": "",
+    "url_banner-inferior-principal": ""
+  },
+  {
+    "categoria": "Cabinas De Sonido",
+    "url_imagen_cloudinary": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752349010/banner-cabinas-sonido-profesional_zmj2gk.webp",
+    "banners_principales": "",
+    "url_banners_principales": "",
+    "banner_carrusel_superior": "",
+    "url_banner_carrusel_superior": "",
+    "banner_carrusel_inferior": "",
+    "url_banner_carrusel_inferior": "",
+    "banner-inferior-principal": "",
+    "url_banner-inferior-principal": ""
+  },
+  {
+    "categoria": "Energía solar",
+    "url_imagen_cloudinary": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752349004/banner-energia-solar_wrn3ct.webp",
+    "banners_principales": "",
+    "url_banners_principales": "",
+    "banner_carrusel_superior": "",
+    "url_banner_carrusel_superior": "",
+    "banner_carrusel_inferior": "",
+    "url_banner_carrusel_inferior": "",
+    "banner-inferior-principal": "",
+    "url_banner-inferior-principal": ""
+  },
+  {
+    "categoria": "Audio Y Producción",
+    "url_imagen_cloudinary": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752349011/banner-audio-produccion_ofelfz.webp",
+    "banners_principales": "",
+    "url_banners_principales": "",
+    "banner_carrusel_superior": "",
+    "url_banner_carrusel_superior": "",
+    "banner_carrusel_inferior": "",
+    "url_banner_carrusel_inferior": "",
+    "banner-inferior-principal": "",
+    "url_banner-inferior-principal": ""
+  },
+  {
+    "categoria": "Computadores y Accesorios",
+    "url_imagen_cloudinary": "https://res.cloudinary.com/dhqpxn3y4/image/upload/v1752349007/banner-computadores-accesorios_jqkbcb.webp",
+    "banners_principales": "",
+    "url_banners_principales": "",
+    "banner_carrusel_superior": "",
+    "url_banner_carrusel_superior": "",
+    "banner_carrusel_inferior": "",
+    "url_banner_carrusel_inferior": "",
+    "banner-inferior-principal": "",
+    "url_banner-inferior-principal": ""
+  }
+]
